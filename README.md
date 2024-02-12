@@ -1,6 +1,8 @@
 # Teaching Tutorial
 ### This is a replication of the project "Tie-breaker: Using language models to quantify gender bias in sports journalism"
-Our language model inference code is based on the original code from kenlm (https://github.com/kpu/kenlm)
+Our language model inference code is based on the original code from [kenLM](https://github.com/kpu/kenlm). The tutorial will go throught this research via [google colab](https://colab.research.google.com/drive/1ssqkxkj4RvY9SRSz0kbSPGbkUH0FvYYV?usp=drive_link). Fisrt, please copy [this folder](https://drive.google.com/drive/folders/1GSLmJNRFnaAHyTJ5VY2BepYWlygZYsBb?usp=sharing) to your google drive and open the colab file in the folder.
+
+
 
 ### Prerequisites
 1. Installing KenLM and background setting
@@ -28,16 +30,15 @@ with open('sent_train.txt', 'w') as f:
 
 ### Running the perplexity calaultion
 
-The perplexity for a sequence of words \( w_1w_2...w_N \) can be calculated using the following formula:
+The perplexity for a sequence of words $\ w_1w_2...w_N $ can be calculated using the following formula:
 
-\[
-\text{Perplexity}(w_1w_2...w_N) = \sqrt[N]{\frac{1}{P(w_1w_2...w_N)}}
-\]
+$\ \text{Perplexity}(w_1w_2...w_N) = \sqrt[N]{\frac{1}{P(w_1w_2...w_N)}}
+$
 
 Where:
-- \( w_1w_2...w_N \) represents a sequence of N words.
-- \( P(w_1w_2...w_N) \) is the probability assigned by the language model to the sequence of words.
-- \( \sqrt[N]{\cdot} \) denotes taking the Nth root.
+- $\ w_1w_2...w_N $ represents a sequence of N words.
+- $\ P(w_1w_2...w_N) $ is the probability assigned by the language model to the sequence of words.
+- $\ \sqrt[N]{\cdot} $ denotes taking the Nth root.
 
 
 ```bash
@@ -62,13 +63,13 @@ model.score('game')
 
 ### Atypicality Score Calculation
 
-Given a question \( q \) containing a set of unique words \( \{w_1, w_2, ..., w_N\} \), excluding stop words and entity names:
+Given a question $\ q  $ containing a set of unique words $\{w_1, w_2, ..., w_N\}$ , excluding stop words and entity names:
 
-\[ Sc(q) = \frac{1}{N} \sum_{i=1}^{N} IDF(w_i) \]
+$\ Sc(q) = \frac{1}{N} \sum_{i=1}^{N} IDF(w_i)$
 
 Where:
-- \( N \) is the number of unique words in the question.
-- \( IDF(w_i) \) is the inverse document frequency of word \( w_i \).
+- $\ N $ is the number of unique words in the question.
+- $\ IDF(w_i) $ is the inverse document frequency of word $\ w_i $.
 
 
 
@@ -87,7 +88,6 @@ Where:
 | Typical |  Have you played each other before?  | 1.59648  |
 | Atypical|  Are you a vodka drinker?  | 6.580595 |
 
-![](/workspaces/Fu_Tiebreaker_Replication/result_images/question_type_plot.png)
 
 **c) Gender Bias in both types of questions**
 
@@ -96,9 +96,7 @@ Where:
 | Atypical| 3.114719928349132e-05 |
 | Typical | 0.5979210176093868 |
 
-**c) Visualization of the results**
-![](/workspaces/Fu_Tiebreaker_Replication/result_images/question_type_plot.png)
-
+![alt text](https://github.com/theuerc/Fu_Tiebreaker_Replication/blob/main/result_images/question_type_plot.png)
 
 
 ### Top10 Players Score Calculation
@@ -108,9 +106,13 @@ Where:
 | Rest | 0.008823000524376021 |
 
 **a) Visualization of the results**
-![](/workspaces/Fu_Tiebreaker_Replication/result_images/top10_plot.png)
+
+![alt text](https://github.com/theuerc/Fu_Tiebreaker_Replication/blob/main/result_images/top10_rest.png)
+
+
 
 ### Winning vs. Losing Score Calculation
 **a) Visualization of the results**
-![](/workspaces/Fu_Tiebreaker_Replication/result_images/win_lose_plot.png)
+
+![alt text](https://github.com/theuerc/Fu_Tiebreaker_Replication/blob/main/result_images/win_lose_plot.png)
 
