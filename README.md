@@ -30,7 +30,7 @@ with open('sent_train.txt', 'w') as f:
 
 ### Running the perplexity calaultion
 
-The perplexity for a sequence of words $\ w_1w_2...w_N $ can be calculated using the following formula:
+The perplexity for a sequence of words $w_1w_2...w_N$ can be calculated using the following formula:
 
 $\ \text{Perplexity}(w_1w_2...w_N) = \sqrt[N]{\frac{1}{P(w_1w_2...w_N)}}
 $
