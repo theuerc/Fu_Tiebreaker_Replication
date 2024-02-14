@@ -2,8 +2,6 @@
 ### This is a replication of the project "Tie-breaker: Using language models to quantify gender bias in sports journalism"
 Our language model inference code is based on the original code from [kenLM](https://github.com/kpu/kenlm). The tutorial will go throught this research via [google colab](https://colab.research.google.com/drive/1ssqkxkj4RvY9SRSz0kbSPGbkUH0FvYYV?usp=drive_link). Fisrt, please copy [this folder](https://drive.google.com/drive/folders/1GSLmJNRFnaAHyTJ5VY2BepYWlygZYsBb?usp=sharing) to your google drive and open the colab file in the folder.
 
-[**ORIGINAL DATASET LINK**](https://www.cs.cornell.edu/~liye/tennis.html)
-
 ### Prerequisites
 1. Installing KenLM and background setting
 ```bash
@@ -116,3 +114,7 @@ Where:
 
 ![alt text](https://github.com/theuerc/Fu_Tiebreaker_Replication/blob/main/result_images/win_lose_plot.png)
 
+
+
+
+[**ORIGINAL PAPER DATASET LINK**](https://www.cs.cornell.edu/~liye/tennis.html)
